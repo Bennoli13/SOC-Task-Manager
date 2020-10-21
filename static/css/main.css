@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+	font-family: verdana;
+	background-color: powderblue;
+	text-align:center;
+}
+h1 {
+	color: red;
+}
+
+.table-content {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+}
+
+.table-content th, td {
+	border: 1px solid black;
+	padding:0 15px 0 15px;
+}
+
+.table-content tr {
+	line-height: 25px;
+	border: 1px solid black;
+}
+
+.table-form {
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+	border: 0;
+}
+
+.table-form th {
+	border: 0;
+}
+.table-form td {
+	border: 0;
+}
+.table-form tr {
+	border: 0;
+}
+
+/*
+
+table{
+	border: 1px solid black;
+	margin-left: auto;
+	margin-right: auto;
+	border-collapse: collapse;
+ 
+}
+
+th, td{
+	border: 1px solid black;
+	padding:0 15px 0 15px;
+	
+
+}
+
+tr{
+	line-height: 25px;
+}
+
+*/
