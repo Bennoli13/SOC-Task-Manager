@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+</head>
+<body>
+
+<h1>SOC Task Manager</h1>
+<div class="content">	
+	<table class="table-content" >
+		<tr>
+			<th>
+				Task 
+			</th>
+			<th>
+				Added
+			</th>
+			<th>
+				Deadline
+			</th>
+			<th>
+				PIC
+			</th>
+			<th>
+				Actions
+			</th>
+		</tr>
+		{% for task in tasks %}
+			<tr>
+				<td>{{ task.content }}</td>
+				<td>{{ task.date_created.date() }}</td>
+				<td>{{ task.deadline }}</td>
+				<td>{{ task.pic }}</td>
+				<td>
+					<a href="/delete/{{task.id}}" >Delete</a>
+					<br>
+					<a href="/update/{{task.id}}" >Update</a>
+				</td>
+
+			</tr>
+		{% endfor %}
+	</table>
+
+	<br>
+</div>
+
+<div class="form">
+
+	<form action="/" method="POST">
+		<table class="table-form" >
+			<tr class="table-form" style="border: 0" >
+				<th style="border: 0">
+					<label for="content">Task</label>
+				</th>
+				<th>
+					<label for="deadline">Deadline</label>
+				</th>
+				<th>
+					<label for="pic">Pic</label>
+				</th>
+			</tr>
+			<tr class="table-form" style="border: 0" >
+				<td>
+					<input type="test" name="content" id="content" >
+				</td>
+				<td>
+		 			<input type="test" name="deadline" id="dealine" >
+		 		</td> 
+		 		<td>
+					<input type="test" name="pic" id="pic" >
+				</td>
+			</tr>
+		</table>
+		<input type="submit" value="Add Task">
+	</form>
+
+</body>
+</html> 
